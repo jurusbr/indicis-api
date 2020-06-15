@@ -27,8 +27,7 @@ target/
 /.nb-gradle/
 build/
 
-Dockerfile*
-Dockerfile.env
+Dockerfile
 
 ### VS Code ###
 .vscode/

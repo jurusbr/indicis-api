@@ -12,8 +12,10 @@ public class IndicisController {
 	private IndiceRepository indiceRepository;
 
 	@GetMapping("/indice")
-	public Iterable<Indice> getAllIndices( @RequestParam Integer tipo) {
-		return indiceRepository.findTopByTpindiceOrderByDateDesc(tipo);
+	public Iterable<Indice> getAllIndices( @RequestParam String tipo) {
+		Integer tpindice = IndiceConverter.convertTpIndice(tipo);
+		return indiceRepository.findTopByTpindiceOrderByDateDesc(tpindice);
+
 	}
 	
 }
