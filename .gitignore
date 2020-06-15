@@ -28,6 +28,7 @@ target/
 build/
 
 Dockerfile*
+Dockerfile.env
 
 ### VS Code ###
 .vscode/
