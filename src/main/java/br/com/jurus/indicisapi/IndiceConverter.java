@@ -5,20 +5,23 @@ import java.util.Map;
 
 public class IndiceConverter {
 	
-private static Map<String, Integer> tpindices;
+private static HashMap<String, Integer> mapindices;
 	
 	static {
-		tpindices= new HashMap<String, Integer>();
-		tpindices.put("cdi", 1);
-		tpindices.put("difuturo", 2);
-		tpindices.put("ipca", 3);
-		tpindices.put("ipcaindice", 4);
-		tpindices.put("ipcamensal", 5);
-		tpindices.put("cdifator", 6);
+		mapindices= new HashMap<String, Integer>();
+		mapindices.put("cdi", 1);
+		mapindices.put("difuturo", 2);
+		mapindices.put("ipca", 3);
+		mapindices.put("ipcaindice", 4);
+		mapindices.put("ipcamensal", 5);
+		mapindices.put("cdifator", 6);
 	}
 	
 	public static Integer convertTpIndice(String tpindice) {
-		return tpindices.get(tpindice);
+		if(!mapindices.containsKey(tpindice)) {
+			return -1;
+		}
+		return mapindices.get(tpindice);
 	}
 
 

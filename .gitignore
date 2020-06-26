@@ -31,3 +31,6 @@ Dockerfile
 
 ### VS Code ###
 .vscode/
+
+deploy.sh
+*.log
